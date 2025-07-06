@@ -26,11 +26,13 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
     components: {
+      header: ['@/components/Logo/AdminTitleFixer#AdminTitleFixer'],
       graphics: {
         Logo: '@/components/Logo/Logo#Logo',
         Icon: '@/components/Logo/Icon#Icon',
       },
     },
+
     meta: {
       title: 'Qorepay Admin',
       description: 'Qorepay Admin Panel for managing blog content',

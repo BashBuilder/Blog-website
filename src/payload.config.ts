@@ -22,16 +22,29 @@ const dirname = path.dirname(filename)
 
 export default buildConfig({
   admin: {
-    components: {
-      // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
-      // Feel free to delete this at any time. Simply remove the line below and the import `BeforeLogin` statement on line 15.
-      // beforeLogin: ['@/components/BeforeLogin'],
-      // The `BeforeDashboard` component renders the 'welcome' block that you see after logging into your admin panel.
-      // Feel free to delete this at any time. Simply remove the line below and the import `BeforeDashboard` statement on line 15.
-      // beforeDashboard: ['@/components/BeforeDashboard'],
-    },
     importMap: {
       baseDir: path.resolve(dirname),
+    },
+    components: {
+      graphics: {
+        Logo: '@/components/Logo/Logo#Logo',
+        Icon: '@/components/Logo/Icon#Icon',
+      },
+    },
+    meta: {
+      title: 'Qorepay Admin',
+      description: 'Qorepay Admin Panel for managing blog content',
+      icons: [
+        { rel: 'icon', type: 'image/png', url: '/favicon.png' },
+        // { rel: 'apple-touch-icon', type: 'image/png', url: '/apple-touch-icon.png' },
+      ],
+      openGraph: {
+        title: 'Qorepay Admin',
+        description: 'Manage your blog content with ease',
+        siteName: 'Qorepay',
+        images: [{ url: 'https://www.qorepay.com', width: 800, height: 600 }],
+      },
+      robots: 'noindex, nofollow',
     },
     user: Users.slug,
     livePreview: {

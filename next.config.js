@@ -18,19 +18,32 @@ const remotePatterns = isProd
       },
     ]
   : [
-      ...[NEXT_PUBLIC_SERVER_URL /* 'https://example.com' */].map((item) => {
-        const url = new URL(item)
+      {
+        hostname: 'localhost:3000',
+        protocol: 'http',
+        // pathname: '/api/media/file/**',
+      },
+      // ...[NEXT_PUBLIC_SERVER_URL /* 'https://example.com' */].map((item) => {
+      //   const url = new URL(item)
 
+      //   return {
+      //     hostname: url.hostname,
+      //     protocol: url.protocol.replace(':', ''),
+      //   }
+      // }),
+    ]
+
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      ...['https://qorepay-blog.vercel.app'].map((item) => {
+        const url = new URL(item)
         return {
           hostname: url.hostname,
           protocol: url.protocol.replace(':', ''),
         }
       }),
-    ]
-
-const nextConfig = {
-  images: {
-    remotePatterns,
+    ],
   },
   webpack: (webpackConfig) => {
     webpackConfig.resolve.extensionAlias = {

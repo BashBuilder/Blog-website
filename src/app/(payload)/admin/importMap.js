@@ -23,7 +23,7 @@ import { RowLabel as RowLabel_ec255a65fa6fa8d1faeb09cf35284224 } from '@/Header/
 import { RowLabel as RowLabel_1f6ff6ff633e3695d348f4f3c58f1466 } from '@/Footer/RowLabel'
 import { AdminTitleFixer as AdminTitleFixer_f147e74a541e2a1b5dcfd2566cd7a914 } from '@/components/Logo/AdminTitleFixer'
 import { Icon as Icon_3ff15b814cdf190575ac4e737da964e4 } from '@/components/Logo/Icon'
-import { Logo as Logo_a0bd5f2fa532ef2166f77171a2b9828a } from '@/components/Logo/Logo'
+import { Logo2 as Logo2_efea8636216015b5d2343cd1fa149b70 } from '@/components/Logo/Logo2'
 
 export const importMap = {
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalCell": RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e,
@@ -51,5 +51,5 @@ export const importMap = {
   "@/Footer/RowLabel#RowLabel": RowLabel_1f6ff6ff633e3695d348f4f3c58f1466,
   "@/components/Logo/AdminTitleFixer#AdminTitleFixer": AdminTitleFixer_f147e74a541e2a1b5dcfd2566cd7a914,
   "@/components/Logo/Icon#Icon": Icon_3ff15b814cdf190575ac4e737da964e4,
-  "@/components/Logo/Logo#Logo": Logo_a0bd5f2fa532ef2166f77171a2b9828a
+  "@/components/Logo/Logo2#Logo2": Logo2_efea8636216015b5d2343cd1fa149b70
 }

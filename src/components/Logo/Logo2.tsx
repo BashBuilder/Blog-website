@@ -1,5 +1,3 @@
-'use client'
-import { useTheme } from '@payloadcms/ui'
 import clsx from 'clsx'
 import React from 'react'
 
@@ -9,11 +7,8 @@ interface Props {
   priority?: 'auto' | 'high' | 'low'
 }
 
-export const Logo = (props: Props) => {
+export const Logo2 = (props: Props) => {
   const { loading: loadingFromProps, priority: priorityFromProps, className } = props
-  const { theme } = useTheme()
-
-  const src = theme === 'dark' ? '/media/logo/qorepaylogo.png' : '/media/logo/qoreLogo.svg'
 
   const loading = loadingFromProps || 'lazy'
   const priority = priorityFromProps || 'low'
@@ -28,7 +23,7 @@ export const Logo = (props: Props) => {
       fetchPriority={priority}
       decoding="async"
       className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
-      src={src}
+      src="/media/logo/qorepaylogo.png"
     />
   )
 }

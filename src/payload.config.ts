@@ -28,7 +28,7 @@ export default buildConfig({
     components: {
       header: ['@/components/Logo/AdminTitleFixer#AdminTitleFixer'],
       graphics: {
-        Logo: '@/components/Logo/Logo#Logo',
+        Logo: '@/components/Logo/Logo2#Logo2',
         Icon: '@/components/Logo/Icon#Icon',
       },
     },
@@ -44,7 +44,13 @@ export default buildConfig({
         title: 'Qorepay Admin',
         description: 'Manage your blog content with ease',
         siteName: 'Qorepay',
-        images: [{ url: 'https://www.qorepay.com', width: 800, height: 600 }],
+        images: [
+          {
+            url: 'https://drive.google.com/file/d/127wcCK6TntoJ5G89oFQKrcvE6go1Gtnh/view?usp=sharing',
+            width: 800,
+            height: 600,
+          },
+        ],
       },
       robots: 'noindex, nofollow',
     },

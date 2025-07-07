@@ -4,14 +4,11 @@ export const Icon = () => {
   return (
     <img
       alt="Qorepay favicon"
-      width={193}
-      height={34}
-      // loading={loading}
-      // fetchPriority={priority}
+      width={100}
+      height={100}
       decoding="async"
-      className={clsx('max-w-[9.375rem] w-full h-[34px]')}
-      // src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
-      src="/favicon.svg"
+      className={clsx('max-w-[100px] w-full h-[100px]')}
+      src="/favicon.png"
     />
   )
 }

@@ -1,1 +1,1 @@
-# Qorepay Blog
+# Qorepay Blog Site

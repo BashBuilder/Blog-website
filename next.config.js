@@ -4,11 +4,7 @@ import redirects from './redirects.js'
 
 const NEXT_PUBLIC_SERVER_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : undefined || process.env.__NEXT_PRIVATE_ORIGIN || 'http://localhost:3000'
-
-const PUBLIC_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || // manually set in .env for clarity
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://qorepay-blog.vercel.app')
+  : undefined || process.env.__NEXT_PRIVATE_ORIGIN || 'https://qorepay-blog.vercel.app'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -22,11 +18,6 @@ const nextConfig = {
           protocol: url.protocol.replace(':', ''),
         }
       }),
-      {
-        protocol: 'https',
-        hostname: new URL(PUBLIC_URL).hostname,
-        pathname: '/api/media/file/**',
-      },
     ],
   },
   webpack: (webpackConfig) => {

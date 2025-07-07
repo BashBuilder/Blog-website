@@ -1,7 +1,7 @@
 'use client'
 import { useTheme } from '@payloadcms/ui'
 import clsx from 'clsx'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 interface Props {
   className?: string
@@ -13,7 +13,15 @@ export const Logo = (props: Props) => {
   const { loading: loadingFromProps, priority: priorityFromProps, className } = props
   const { theme } = useTheme()
 
-  const src = theme === 'dark' ? '/media/logo/qorepaylogo.png' : '/media/logo/qoreLogo.svg'
+  const [src, setSrc] = useState('/media/logo/qoreLogo.svg') // default to light
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      setSrc('/media/logo/qorepaylogo.png')
+    } else {
+      setSrc('/media/logo/qoreLogo.svg')
+    }
+  }, [theme])
 
   const loading = loadingFromProps || 'lazy'
   const priority = priorityFromProps || 'low'

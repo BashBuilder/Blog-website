@@ -33,7 +33,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               preview: isEnabled,
             }}
           />
-
           <Header />
           {children}
           <Footer />
@@ -43,11 +42,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   )
 }
 
-// export const metadata: Metadata = {
-//   metadataBase: new URL(getServerSideURL()),
-//   openGraph: mergeOpenGraph(),
-//   twitter: {
-//     card: 'summary_large_image',
-//     creator: '@payloadcms',
-//   },
-// }
+export const metadata: Metadata = {
+  metadataBase: new URL(getServerSideURL()),
+  openGraph: mergeOpenGraph(),
+  twitter: {
+    card: 'summary_large_image',
+    creator: 'Qorepay',
+  },
+}

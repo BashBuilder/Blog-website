@@ -13,6 +13,7 @@ const nextConfig = {
         'http://localhost:3000',
         'https://blog-website-murex-three.vercel.app',
         'http://res.cloudinary.com',
+        'blob.vercel-storage.com',
       ].map((item) => {
         const url = new URL(item)
         return {

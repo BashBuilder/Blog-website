@@ -1,7 +1,5 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
-// import cloudStorage from '@payloadcms/plugin-cloud-storage'
-// import cloudinaryPlugin from 'payload-cloudinary-plugin/dist/plugins'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 
 import sharp from 'sharp' // sharp-import
@@ -196,18 +194,13 @@ export default buildConfig({
     vercelBlobStorage({
       enabled: true,
       collections: {
-        // media: {
-        //   prefix: 'cms_images',
-        // },
         media: true,
       },
-      token: process.env.BLOB_READ_WRITE_TOKEN!,
-      addRandomSuffix: true,
-      cacheControlMaxAge: 3600,
-      clientUploads: true,
+      token: process.env.BLOB_READ_WRITE_TOKEN,
     }),
+    // storage-adapter-placeholder
   ],
-
+  secret: process.env.PAYLOAD_SECRET,
   sharp,
 
   typescript: {
